@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:wght@400;600&display=swap");
+
+$light: #cfcfcf;
+$lighter: #e7e7e7;
+$lightest: #fafafa;
+$dark: #3a3a3a;
+$darker: #2e2e2e;
+$darkest: #111111;
+$red: #ec5628;
+$green: #2bcc46;
+$orange: #fcaa12;
+$blue: #1e54dd;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background: linear-gradient(to top right, $darkest, $dark);
+}
+
+nav {
+	flex: 1;
+	height: 100vh;
+	font-family: "Open sans", sans-serif;
+	display: flex;
+	align-items: center;
+
+	&:first-of-type {
+		justify-content: flex-start;
+		padding-left: 5em;
+	}
+
+	&:last-of-type {
+		justify-content: flex-end;
+		padding-right: 5em;
+	}
+
+	img {
+		height: 14vh;
+
+		&:hover {
+			animation: rotate 1s forwards;
+		}
+	}
+
+	ul {
+		list-style: none;
+
+		li + li {
+			margin-top: 1.5em;
+		}
+
+		a {
+			color: $light;
+			text-decoration: none;
+			font-size: 1.125rem;
+
+			&.active {
+				color: $lightest;
+				font-weight: bold;
+			}
+
+			&:hover {
+				color: $lightest;
+			}
+		}
+	}
+}
+
+@mixin btn($clr, $bg-clr, $fnt-sz) {
+	color: $clr;
+	background: $bg-clr;
+	font-family: "Open Sans", sans-serif;
+	font-size: $fnt-sz;
+	font-weight: bold;
+	padding: 0.35em 0.9em;
+	border: none;
+	box-shadow: 0 2px 2px 1px rgba(black, 0.2);
+	border-radius: 0.25em;
+
+	&:hover {
+		cursor: pointer;
+		filter: brightness(1.1);
+	}
+
+	&:active {
+		transform: scale(96%);
+	}
+}
+
+.hide {
+	display: none !important;
+}
+
+.show {
+	visibility: visible !important;
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}

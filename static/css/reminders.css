@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:wght@400;600&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background: -webkit-gradient(linear, left bottom, right top, from(#0e1085), to(#5f0909));
+	background: linear-gradient(to top right, #0e1085, #5f0909);
+}
+
+nav {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	height: 100vh;
+	font-family: 'Open sans', sans-serif;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+nav:first-of-type {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	padding-left: 5em;
+}
+
+nav:last-of-type {
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	padding-right: 5em;
+}
+
+nav img {
+	height: 14vh;
+}
+
+nav img:hover {
+	-webkit-animation: rotate 1s forwards;
+	animation: rotate 1s forwards;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li + li {
+	margin-top: 1.5em;
+}
+
+nav ul a {
+	color: #cfcfcf;
+	text-decoration: none;
+	font-size: 1.125rem;
+}
+
+nav ul a.active {
+	color: #fafafa;
+	font-weight: bold;
+}
+
+nav ul a:hover {
+	color: #fafafa;
+}
+
+.hide {
+	display: none !important;
+}
+
+.show {
+	visibility: visible !important;
+}
+
+@-webkit-keyframes rotate {
+	to {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate {
+	to {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+body {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-family: 'Open Sans', sans-serif;
+}
+
+main {
+	display: -ms-grid;
+	display: grid;
+	place-items: center;
+}
+
+.row {
+	height: 2.75rem;
+	width: 20rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.row + .row {
+	margin-top: 2.7em;
+}
+
+input {
+	width: 1.75rem;
+	height: 100%;
+	margin-right: 2em;
+}
+
+input[type='submit'] {
+	margin: auto;
+	color: #e7e7e7;
+	background: #2bcc46;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.25rem;
+	font-weight: bold;
+	padding: 0.35em 0.9em;
+	border: none;
+	-webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0.25em;
+}
+
+input[type='submit']:hover {
+	cursor: pointer;
+	-webkit-filter: brightness(1.1);
+	filter: brightness(1.1);
+}
+
+input[type='submit']:active {
+	-webkit-transform: scale(96%);
+	transform: scale(96%);
+}
+
+.text {
+	color: #111111;
+	font-size: 1.25rem;
+	font-weight: bold;
+	background: #fafafa;
+	width: 80%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-inline: 0.85em;
+	border-radius: 5px;
+}
+/*# sourceMappingURL=reminders.css.map */

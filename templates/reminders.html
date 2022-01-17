@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/images/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/reminders.css">
+    <script src="/static/js/reminders.js" defer></script>
+    <title>Reminders | Time-it</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index"><img src="../static/images/logo.svg"></a>
+    </nav>
+
+    <main>
+        <div class="reminders">
+            <form method="POST">
+                <div class="row">
+                    <input onclick="check()" type="checkbox" id="water">
+                    <div class="text">Water</div>
+                    <input type="hidden" value="{{water}}" name="water" id="water_input">
+                </div>
+                <div class="row">
+                    <input onclick="check()" type="checkbox" id="meditation">
+                    <div class="text">Meditation</div>
+                    <input type="hidden" value="{{meditate}}" name="meditation" id="meditation_input">
+                </div>
+                <div class="row">
+                    <input onclick="check()" type="checkbox" id="exercise">
+                    <div class="text">Exercise</div>
+                    <input type="hidden" value="{{exercise}}" name="exercise" id="exercise_input">
+                </div>
+                <div class="row">
+                    <input onclick="check()" type="checkbox" id="rest">
+                    <div class="text">Take a Break</div>
+                    <input type="hidden" value="{{relax}}" name="rest" id="rest_input">
+                </div>
+                <div class="row">
+                    <input onclick="check()" type="checkbox" id="entertain">
+                    <div class="text">Entertain</div>
+                    <input type="hidden" value="{{entertain}}" name="entertain" id="entertain_input">
+                </div>
+                <div class="row">
+                    <input type="submit" id="save_btn" value="Save" style="width: fit-content; height: fit-content;">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="timetable">Time Table</a>
+            </li>
+            <li>
+                <a href="reminders" class="active">Reminders</a>
+            </li>
+            <li class="active">
+                <a href="recreation">Recreation</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
